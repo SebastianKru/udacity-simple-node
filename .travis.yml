@@ -17,7 +17,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node --build-arg MY_ENV_Variable=${MY_ENV_Variable} .
+  - docker build -t simple-node --build-arg NAME=${NAME} .
   - docker tag simple-node sebastiankru/simple-node:latest
 
 # Tasks to perform after the process is successful. Formatting the Docker username and 

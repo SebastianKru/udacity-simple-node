@@ -2,11 +2,11 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-const  envVariable = process.env.MY_ENV_Variable;
+const ME = process.env.NAME;
 
 async function main() {
   while(true) {
-    console.log('Containers rule! v2!  ${envVariable} !');
+    console.log('Containers rule! v2!' + ME);
     await sleep(5000);
   }
 }
