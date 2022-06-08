@@ -2,7 +2,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-const  envVariable = rocess.env.MY_ENV_Variable;
+const  envVariable = process.env.MY_ENV_Variable;
 
 async function main() {
   while(true) {
