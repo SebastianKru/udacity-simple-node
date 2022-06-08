@@ -24,5 +24,6 @@ script:
 # password as below enables you to programmatically log in without having the password exposed in logs.
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - echo "$MY_ENV_Variable"
   - docker push sebastiankru/simple-node
 
