@@ -17,13 +17,13 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node --build-arg NAME=${NAME} .
+  - docker build -t simple-node --build-arg NAME=$NAME .
   - docker tag simple-node sebastiankru/simple-node:latest
 
 # Tasks to perform after the process is successful. Formatting the Docker username and 
 # password as below enables you to programmatically log in without having the password exposed in logs.
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - echo "$MY_ENV_Variable"
+  - echo $MY_ENV_Variable
   - docker push sebastiankru/simple-node
 
