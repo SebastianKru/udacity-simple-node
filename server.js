@@ -6,7 +6,7 @@ const  envVariable = process.env.MY_ENV_Variable;
 
 async function main() {
   while(true) {
-    console.log('Containers rule! v2! ' + envVariable + "!");
+    console.log('Containers rule! v2!  ${envVariable} !');
     await sleep(5000);
   }
 }
