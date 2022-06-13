@@ -19,3 +19,9 @@ spec:
         image: sebastiankru/simple-node
         ports:
         - containerPort: 80
+      livenessProbe:
+        httpGet:
+          path: /health
+          port: 8080
+        initialDelaySeconds: 60
+        periodSeconds: 3
